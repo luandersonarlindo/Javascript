@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>País</title>
+    <style>
+        body {
+            background-color: darkred;
+            font: normal 18pt Arial;
+            color: white;
+        }
+
+        input {
+            font: normal 18pt Arial;
+        }
+
+        div#res {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Qual o seu país?</h1>
+    Selecione o seu país: <input type="text" name="txtp" id="txtp">
+    <input type="button" value="Verificar" onclick="vp()">
+
+    <div id="res">
+
+    </div>
+
+    <script>
+        function vp() {
+            var txtpp = window.document.querySelector('input#txtp')
+            var res = window.document.querySelector('div#res')
+            var pais = String(txtpp.value)
+            res.innerHTML = `<p>Vivendo em <strong>${pais.toUpperCase()}.</strong></p>`
+
+            if (pais == 'Brasil' || pais == 'brasil') {
+                res.innerHTML += `<p>Brasileriro!</p>`
+            } else {
+                res.innerHTML += `<p>Estrangeiro!</p>`
+            }
+        }
+    </script>
+</body>
+
+</html>

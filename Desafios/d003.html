@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>d003</title>
+    <style>
+        input {
+            width: 150px;
+            height: 150px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Antes e depois</h1>
+    <input type="button" value="Antecessor e Sucessor" onclick="as()">
+
+    <script>
+        function as() {
+            var n = Number(window.prompt('Digite um numero inteiro qualquer:'))
+            var a= n-1
+            var s= n+1
+            window.alert(`Antes de ${n} temos ${a}\nDepois de ${n} temos ${s}`)
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>d004</title>
+    <style>
+        input {
+            width: 150px;
+            height: 150px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Calculando troco</h1>
+    <input type="button" value="Comprar Produto" onclick="cp()">
+
+    <script>
+        function cp() {
+            var p = window.prompt('Que produto você esta comprando?')
+            var c = Number(window.prompt(`Quanto custa ${p} que você esta comprando?`))
+            var v = Number(window.prompt(`Qual foi o valor que você deu para pagar ${p}`))
+            var t = Number(v - c).toFixed(2).replace('.', ',')
+            window.alert(`Você comprou ${p} que custou R$ ${c}.\nDeu R$ ${v} em dinheiro e vai receber R$ ${t} de troco.\nVolte Sempre!`)
+        }
+    </script>
+</body>
+
+</html>
